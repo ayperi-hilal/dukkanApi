@@ -5,8 +5,6 @@ import {createStackNavigator} from '@react-navigation/stack'/**sayfadan sayfaya 
 import Products from './src/pages/Products/Products';
 import ProductsDeatils from './src/pages/Products/ProductsDeatils';
 
-
-
 const Stack=createStackNavigator()
 
 export default function App() {

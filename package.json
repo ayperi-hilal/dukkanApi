@@ -6,9 +6,17 @@
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
-    "web": "expo start --web"
+    "web": "expo start --web",
+    "lint": "eslint .",
+    "dev-android": "react-native run-android --variant=devDebug --appIdSuffix dev",
+    "dev-android-release-variant": "react-native run-android --variant=devRelease --appIdSuffix dev",
+    "dev-android-release": "cd android &&./gradlew clean && ./gradlew assembleDevRelease",
+    "live-android": "react-native run-android --variant=liveDebug --appIdSuffix live",
+    "live-android-release-variant": "react-native run-android --variant=liveRelease --appIdSuffix live",
+    "live-android-release": "cd android &&./gradlew clean && ./gradlew assembleLiveRelease"
   },
   "dependencies": {
+    "@expo/webpack-config": "^0.17.0",
     "@react-navigation/native": "^6.0.12",
     "@react-navigation/stack": "^6.2.3",
     "axios": "^0.27.2",
@@ -18,12 +26,15 @@
     "react-dom": "^18.2.0",
     "react-native": "0.69.5",
     "react-native-config": "^1.4.6",
+    "react-native-dotenv": "^3.3.1",
     "react-native-safe-area-context": "4.3.1",
     "react-native-screens": "~3.15.0",
+    "react-native-version-control": "^1.0.5",
     "react-native-web": "~0.18.7"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.9"
+    "@babel/core": "^7.12.9",
+    "babel-plugin-inline-dotenv": "^1.7.0"
   },
   "private": true
 }

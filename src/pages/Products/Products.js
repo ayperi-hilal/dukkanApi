@@ -1,11 +1,15 @@
-import React from "react";
+import React, { Component } from "react";
 import { SafeAreaView, Text } from 'react-native'
-import Config from 'react-native-config';
+import Config from "react-native-config";
+import {API_URL} from '@env'
+
 
 const Products = () => {
     return (
         <SafeAreaView>
-            <Text>Products {Config.API_URL}</Text>
+            <Text> Api çalışmadı!!!</Text>
+            <Text> {API_URL}</Text>
+           
         </SafeAreaView>
 
     );
