@@ -4,13 +4,23 @@ import { NavigationContainer } from '@react-navigation/native'; /**olmaz ise say
 import { createStackNavigator } from '@react-navigation/stack'/**sayfadan sayfaya geçiş yapmak için */
 import Products from './src/pages/Products/Products';
 import ProductsDeatils from './src/pages/Products/ProductsDeatils';
+import Login from './src/pages/Login/Login';
 
 const Stack = createStackNavigator()
 
 export default function App() {
   return (
+   
     <NavigationContainer>
       <Stack.Navigator>
+      <Stack.Screen name='LoginPge' component={Login}
+          options={{
+            title: "Oturum Aç",
+            headerStyle: { backgroundColor: '#81d4fa' },
+            headerTitleStyle: { color: 'white' },
+          }}
+        />
+
         <Stack.Screen name='ProductPage' component={Products}
           options={{
             title: "Alış-Veriş",
